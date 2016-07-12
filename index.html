@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<!-- Jimena Armijos Assignment 5 -->    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Assignment 5</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <!--<link rel="stylesheet" href="main.css">-->
+    
+<!--Step 5-->
+<!--
+<script> 
+if(window.addEventListener){
+  window.addEventListener('load', init);
+}
+function init(){
+     var button = document.getElementById("buttonID");                    
+     button.onclick = function(){
+        window.alert("I have been clicked");
+     }
+}
+</script> 
+-->   
+        
+    </head>
+    <body>
+        
+<!--        
+COMM644 Assignment 5
+-->
+<!--
+Step 1.
+-->
+<!--
+<button onclick="displayMessage()">Click me</button>        
+<script>
+function displayMessage(){
+     window.alert("I have been clicked");
+}               
+</script>
+-->
+        
+<!--        
+Step 2.
+-->
+<!--
+<button id="buttonID">Click me</button>    
+<script>        
+document.getElementById("buttonID").addEventListener("click", function(){
+    window.alert("I have been clicked");
+});
+</script>        
+-->
+                
+<!--      
+Step 3.
+-->
+<!--
+<button id="buttonID">Click me</button> 
+<script>        
+var button = document.getElementById("buttonID");
+
+if (button.addEventListener) {    // For all major browsers, except IE 8 and earlier
+    button.addEventListener("click", displayMessage);
+} else if (button.attachEvent) {  // For IE 8 and earlier versions
+    button.attachEvent("onclick", displayMessage);
+}        
+               
+function displayMessage(){
+     window.alert("I have been clicked");
+}               
+</script> 
+-->
+        
+<!--      
+Step 4.
+-->
+<!--      
+<button id="buttonID">Click me</button> 
+<script>        
+var button = document.getElementById("buttonID");     
+               
+button.onclick = function(){
+     window.alert("I have been clicked");
+}
+</script> 
+--> 
+
+<!--
+Step 5.
+-->
+<!--
+<button id="buttonID">Click me</button>
+-->
+<!-- script code is in the head section --.
+              
+<!--
+Step 6.
+-->  
+<!--
+<a id="redirect" href="http://www.google.com.">Visit Google</a>
+<script>
+var google = document.getElementById("redirect");
+google.onclick = function(event){ 
+   window.alert("You have clicked on the link");
+   event.preventDefault();
+}
+</script>       
+-->
+       
+<!--      
+Step 7.
+-->
+<!--        
+<textarea id="textAreaID">Text Box</textarea>
+<button id="buttonID">Click me</button>
+        
+<script>
+var textarea = document.getElementById("textAreaID");
+var button = document.getElementById("buttonID");
+        
+if (button.addEventListener) {    // For all major browsers, except IE 8 and earlier
+    button.addEventListener("click", displayText);
+} else if (button.attachEvent) {  // For IE 8 and earlier versions
+    button.attachEvent("onclick", displayText);
+} 
+        
+function displayText(){
+    button.disabled = 'true';    
+    window.alert(textarea.value); 
+}       
+</script>        
+-->        
+               
+<!--
+Step 8.
+-->
+<!--
+<button id="buttonID">Click me</button>         
+<script>
+var button = document.getElementById("buttonID");        
+if (button.addEventListener) {    // For all major browsers, except IE 8 and earlier
+    button.addEventListener("click", showNewPage);
+} else if (button.attachEvent) {  // For IE 8 and earlier versions
+    button.attachEvent("onclick", showNewPage);
+} 
+function showNewPage(){
+    var newWindow = window.open("newpage.html",null,"height=300,width=300,status=yes,toolbar=no,menubar=no,location=no");  
+}
+</script>        
+-->
+        
+<!--
+Step 9.
+-->
+<!--
+<button id="startID">START</button>
+<button id="stopID">STOP</button>      
+<script>  
+function displayText(){
+    window.console.log("Learning Javascript is fun!");
+}
+var id = setInterval(displayText, 2000);
+function stopDisplayText(){
+    clearInterval(id);
+}         
+var startButton = document.getElementById("startID");        
+if (startButton.addEventListener) {    // For all major browsers, except IE 8 and earlier
+    startButton.addEventListener("click", displayText);
+}       
+var stopButton = document.getElementById("stopID");        
+if (stopButton.addEventListener) {    // For all major browsers, except IE 8 and earlier
+    stopButton.addEventListener("click", stopDisplayText);
+} 
+</script>        
+-->
+       
+<!--
+Step 10.
+-->
+<!--
+<select id="ddID" name="Flavors">
+    <option value="blueberry">Blueberry </option>
+    <option value="banana">Banana   </option>
+    <option value="orange">Orange</option>
+    <option value="apple">Apple   </option>
+</select>
+<button id="btnID">Select</button>        
+
+<script>
+var selBtn = document.getElementById("btnID");        
+if (selBtn.addEventListener) {    // For all major browsers, except IE 8 and earlier
+    selBtn.addEventListener("click", dispSelectedItem);
+} else if (selBtn.attachEvent) {  // For IE 8 and earlier versions
+    selBtn.attachEvent("onclick", dispSelectedItem);
+}         
+var dd = document.getElementById("ddID");
+//var e = document.getElementById("ddlViewBy");
+//var strUser = e.options[e.selectedIndex].text;        
+function dispSelectedItem(){
+    var sSelectedValue = dd.options[dd.selectedIndex].value;
+    window.alert( sSelectedValue ); 
+}               
+</script>  
+-->
+
+    </body>
+</html>

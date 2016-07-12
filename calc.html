@@ -1,0 +1,132 @@
+<!doctype html>
+<!--Jimena Armijos Assignment 5-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>Calculator</title>
+
+<!--
+The Calculator II (30 points)
+
+In this part of the assignment you will practice working with the DOM, DOM Events, Functions, and more to create a better version of the calculator that we built in a previous class. To complete this part, follow the steps outlined below:
+-->
+
+<!--
+Figure out a way to simplify your code so that you don’t have to manually attach an event handler to each and every button. You should be able to programmatically attach a listener to every button on the page and attach a handler that listens for the click without having to write so much code. 
+
+HINT: Remember the concept of “event bubbling”. Perhaps it makes more sense to listen for an event on a parent element rather than each and every button….
+-->
+
+<script>
+
+if(window.addEventListener){
+  window.addEventListener('load', init);
+}   
+   
+function init(){ 
+    
+    var sevenKey    = document.getElementById("seven");
+    var eightKey    = document.getElementById("eight"   );
+    var nineKey     = document.getElementById("nine"    );
+    var divideKey   = document.getElementById("divide"  );
+    var fourKey     = document.getElementById("four"    ); 
+    var fiveKey     = document.getElementById("five"    ); 
+    var sixKey      = document.getElementById("six"     );
+    var multiplyKey = document.getElementById("multiply");
+    var oneKey      = document.getElementById("one"     );
+    var twoKey      = document.getElementById("two"     );
+    var threeKey    = document.getElementById("three"   );
+    var subtractKey = document.getElementById("subtract");
+    var zeroKey     = document.getElementById("zero"    );
+    var periodKey   = document.getElementById("period"  );
+    var addKey      = document.getElementById("add"     );
+    var equalKey    = document.getElementById("equal"   );
+    var result  = document.getElementById("result");
+
+    function enter(val){
+        result.value += this.value;     
+    }
+    function calculate(){ 
+        window.console.log("calculate() fired");
+        result.value = eval(result.value);
+    }
+    
+    if (document.addEventListener) {    // For all major browsers, except IE 8 and earlier
+        sevenKey.addEventListener("click", enter);
+    }  
+    if (document.addEventListener) {    // For all major browsers, except IE 8 and earlier
+        eightKey.addEventListener("click", enter);
+    }  
+    if (document.addEventListener) {    // For all major browsers, except IE 8 and earlier
+        nineKey.addEventListener("click", enter);
+    }  
+    if (document.addEventListener) {    // For all major browsers, except IE 8 and earlier
+        divideKey.addEventListener("click", enter);
+    }  
+    if (document.addEventListener) {    // For all major browsers, except IE 8 and earlier
+       fourKey.addEventListener("click", enter);
+    }  
+    if (document.addEventListener) {    // For all major browsers, except IE 8 and earlier
+       fiveKey.addEventListener("click", enter);
+    }  
+    if (document.addEventListener) {    // For all major browsers, except IE 8 and earlier
+       sixKey.addEventListener("click", enter);
+    }  
+    if (document.addEventListener) {    // For all major browsers, except IE 8 and earlier
+       multiplyKey.addEventListener("click", enter);
+    }  
+    if (document.addEventListener) {    // For all major browsers, except IE 8 and earlier
+       oneKey.addEventListener("click", enter);
+    } 
+    if (document.addEventListener) {    // For all major browsers, except IE 8 and earlier
+       twoKey.addEventListener("click", enter);
+    }  
+    if (document.addEventListener) {    // For all major browsers, except IE 8 and earlier
+       threeKey.addEventListener("click", enter);
+    }  
+    if (document.addEventListener) {    // For all major browsers, except IE 8 and earlier
+       subtractKey.addEventListener("click", enter);
+    }  
+    if (document.addEventListener) {    // For all major browsers, except IE 8 and earlier
+       zeroKey.addEventListener("click", enter);
+    } 
+    if (document.addEventListener) {    // For all major browsers, except IE 8 and earlier
+       periodKey.addEventListener("click", enter);
+    }  
+    if (document.addEventListener) {    // For all major browsers, except IE 8 and earlier
+       addKey.addEventListener("click", enter);
+    }  
+    if (equal.addEventListener) {    // For all major browsers, except IE 8 and earlier
+       equal.addEventListener("click", calculate);
+    } 
+}   
+
+</script>    
+       
+</head>
+
+<body>
+	<input type="text" readonly id="result">
+    <br>
+    <input type="button" id="seven" value="7">
+    <input type="button" id="eight" value="8">
+    <input type="button" id="nine" value="9">
+    <input type="button" id="divide" value="/">
+    <br>
+    <input type="button" id="four" value="4">
+    <input type="button" id="five" value="5">
+    <input type="button" id="six" value="6">
+    <input type="button" id="multiply" value="*">
+    <br>
+    <input type="button" id="one" value="1">
+    <input type="button" id="two" value="2">
+    <input type="button" id="three" value="3">
+    <input type="button" id="subtract" value="-">
+    <br>
+    <input type="button" id="zero" value="0">
+    <input type="button" id="period" value=".">
+    <input type="button" id="add" value="+">
+    <input type="button" id="equal" value="=">
+</body>
+
+</html>
